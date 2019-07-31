@@ -1,9 +1,6 @@
 sudo: required # hey Travis, every command of this build requires to be root
-services:
-  - docker # we need the docker cli pre-installed. Install a copy of docker inside the running container
+services: docker # we need the docker cli pre-installed. Install a copy of docker inside the running container
 
-before_install:
-  - docker build -t benjtlv/docker-react -f Dockerfile.dev .
+before_install: docker build -t benjtlv/docker-react -f Dockerfile.dev .
 
-script: :
-  - docker run benjtlv/docker-react npm run test -- --coverage
+script: : docker run benjtlv/docker-react npm run test -- --coverage
