@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Shalom mimi
+          Shalom mimi feature
         </a>
       </header>
     </div>
